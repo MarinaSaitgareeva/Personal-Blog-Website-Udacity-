@@ -1,5 +1,6 @@
 # Personal-Blog-Website-Udacity-
 first project in Udacity course
+
 Introduction
 This project requires you to utilize your HTML and CSS skills to build out a personal blog website, including custom images, layout, and styling. Along with webpage design considerations, you'll work to appropriately structure your files, as well as use proper CSS and HTML formatting & style.
 
@@ -13,4 +14,5 @@ While it can be a bit intimidating to start from scratch for your first time, we
 
 PROJECT SPECIFICATION
 Personal Blog Website
+
 https://review.udacity.com/#!/rubrics/2667/view
