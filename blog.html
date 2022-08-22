@@ -16,30 +16,28 @@
 
     <header>
       <div id="logo">
-        <img src="" alt="logo">
+        <img id="logo-img" src="images/hacker.png" alt="logo">
+        <strong id="page-name">Marina's Blog</strong>
       </div>
-      <strong id="page-name">Blog</strong>
-    </header>
 
-    <nav id="navbar-menu">
-      <ul id="navbar-list">
-        <li class="nav-item"><a class="nav-link" href="blog.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="">About us</a></li>
-        <li class="nav-item"><a class="nav-link" href="">HTML</a></li>
-        <li class="nav-item"><a class="nav-link" href="">CSS</a></li>
-        <li class="nav-item"><a class="nav-link" href="">JavaScript</a></li>
-        <li class="nav-item"><a class="nav-link" href="">Python</a></li>
-        <li class="nav-item"><a class="nav-link" href="">Git and GitHub</a></li>
-        <li class="nav-item">
-          <form id="search" action="/action_page.php">
-            <input id="nav-search-text" type="text" placeholder="Search..." name="search">
-            <button id="nav-search-butn" type="submit">
-              <img id="nav-search-img" src="images/search-alt-free-icon-font.png" alt="search">
-            </button>
-          </form>
-        </li>
-      </ul>
-    </nav>
+      <nav id="navbar-menu">
+        <ul id="navbar-list">
+          <li class="nav-item"><a class="nav-link" href="blog.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="">About us</a></li>
+          <li class="nav-item"><a class="nav-link" href="">HTML</a></li>
+          <li class="nav-item"><a class="nav-link" href="">CSS</a></li>
+          <li class="nav-item"><a class="nav-link" href="">JavaScript</a></li>
+          <li class="nav-item"><a class="nav-link" href="">Python</a></li>
+          <li class="nav-item"><a class="nav-link" href="">Git and GitHub</a></li>
+          <li class="nav-item">
+            <form id="search" action="/action_page.php">
+              <input id="nav-search-text" type="text" placeholder="Search..." name="search">
+              <button id="nav-search-butn" type="submit"></button>
+            </form>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
     <main id="container">
 
@@ -47,11 +45,16 @@
         <div class="author-photo">
           <img src="" alt="foto of author">
         </div>
-        <h4 class="author-and-date"><em>Author</em> and <em>Date of Article</em></h4>
-        <h1 class="article-title">Main article 1</h1>
-        <p class="article-language">Language</p>
-        <p class="article-topic">Topic</p>
-        <p class="article-short-text">
+        <h4 class="author-and-date">by <em>Author</em> on <em>Date of Article</em></h4>
+        <h1 class="main-article-title">
+          <a class="main-article-title-link" href="blog-post.html">Main article 1</a>
+        </h1>
+        <p class="article-category">
+          <a class="article-category-link" href="">Language</a>
+          <a class="article-category-link" href="">Topic</a>
+        </p>
+
+        <p class="main-article-short-text">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit accusantium necessitatibus facere autem nostrum molestias qui fugiat excepturi et! Ad odio obcaecati distinctio necessitatibus adipisci dolore recusandae quibusdam commodi laborum.
         </p>
         <button class="continue-reading">
@@ -65,8 +68,10 @@
         </div>
         <h4 class="author"><em>Author</em></h4>
         <h1 class="article-title">Article 1</h1>
-        <p class="article-language">Language</p>
-        <p class="article-topic">Topic</p>
+        <p class="article-category">
+          <a class="article-category-link" href="">Language</a>
+          <a class="article-category-link" href="">Topic</a>
+        </p>
       </article>
 
       <article class="acticle">
@@ -75,8 +80,10 @@
         </div>
         <h4 class="author"><em>Author</em></h4>
         <h1 class="article-title">Article 2</h1>
-        <p class="article-language">Language</p>
-        <p class="article-topic">Topic</p>
+        <p class="article-category">
+          <a class="article-category-link" href="">Language</a>
+          <a class="article-category-link" href="">Topic</a>
+        </p>
       </article>
 
       <article class="acticle">
@@ -85,8 +92,10 @@
         </div>
         <h4 class="author"><em>Author</em></h4>
         <h1 class="article-title">Article 3</h1>
-        <p class="article-language">Language</p>
-        <p class="article-topic">Topic</p>
+        <p class="article-category">
+          <a class="article-category-link" href="">Language</a>
+          <a class="article-category-link" href="">Topic</a>
+        </p>
       </article>
 
       <article class="acticle">
@@ -95,8 +104,10 @@
         </div>
         <h4 class="author"><em>Author</em></h4>
         <h1 class="article-title">Article 4</h1>
-        <p class="article-language">Language</p>
-        <p class="article-topic">Topic</p>
+        <p class="article-category">
+          <a class="article-category-link" href="">Language</a>
+          <a class="article-category-link" href="">Topic</a>
+        </p>
       </article>
 
       <article class="acticle">
@@ -105,8 +116,10 @@
         </div>
         <h4 class="author"><em>Author</em></h4>
         <h1 class="article-title">Article 5</h1>
-        <p class="article-language">Language</p>
-        <p class="article-topic">Topic</p>
+        <p class="article-category">
+          <a class="article-category-link" href="">Language</a>
+          <a class="article-category-link" href="">Topic</a>
+        </p>
       </article>
 
       <article class="acticle">
@@ -115,18 +128,10 @@
         </div>
         <h4 class="author"><em>Author</em></h4>
         <h1 class="article-title">Article 6</h1>
-        <p class="article-language">Language</p>
-        <p class="article-topic">Topic</p>
-      </article>
-
-      <article class="acticle">
-        <div class="author-photo">
-          <img src="" alt="foto of author">
-        </div>
-        <h4 class="author"><em>Author</em></h4>
-        <h1 class="article-title">Article 7</h1>
-        <p class="article-language">Language</p>
-        <p class="article-topic">Topic</p>
+        <p class="article-category">
+          <a class="article-category-link" href="">Language</a>
+          <a class="article-category-link" href="">Topic</a>
+        </p>
       </article>
 
       <article class="main-article">
@@ -135,8 +140,10 @@
         </div>
         <h4 class="author-and-date"><em>Author</em> and <em>Date of Article</em></h4>
         <h1 class="article-title">Main article 2</h1>
-        <p class="article-language">Language</p>
-        <p class="article-topic">Topic</p>
+        <p class="article-category">
+          <a class="article-category-link" href="">Language</a>
+          <a class="article-category-link" href="">Topic</a>
+        </p>
         <p class="article-short-text">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit accusantium necessitatibus facere autem nostrum molestias qui fugiat excepturi et! Ad odio obcaecati distinctio necessitatibus adipisci dolore recusandae quibusdam commodi laborum.
         </p>
@@ -150,9 +157,23 @@
           <img src="" alt="foto of author">
         </div>
         <h4 class="author"><em>Author</em></h4>
+        <h1 class="article-title">Article 7</h1>
+        <p class="article-category">
+          <a class="article-category-link" href="">Language</a>
+          <a class="article-category-link" href="">Topic</a>
+        </p>
+      </article>
+
+      <article class="acticle">
+        <div class="author-photo">
+          <img src="" alt="foto of author">
+        </div>
+        <h4 class="author"><em>Author</em></h4>
         <h1 class="article-title">Article 8</h1>
-        <p class="article-language">Language</p>
-        <p class="article-topic">Topic</p>
+        <p class="article-category">
+          <a class="article-category-link" href="">Language</a>
+          <a class="article-category-link" href="">Topic</a>
+        </p>
       </article>
 
       <article class="acticle">
@@ -161,8 +182,10 @@
         </div>
         <h4 class="author"><em>Author</em></h4>
         <h1 class="article-title">Article 9</h1>
-        <p class="article-language">Language</p>
-        <p class="article-topic">Topic</p>
+        <p class="article-category">
+          <a class="article-category-link" href="">Language</a>
+          <a class="article-category-link" href="">Topic</a>
+        </p>
       </article>
 
       <article class="acticle">
@@ -171,8 +194,10 @@
         </div>
         <h4 class="author"><em>Author</em></h4>
         <h1 class="article-title">Article 10</h1>
-        <p class="article-language">Language</p>
-        <p class="article-topic">Topic</p>
+        <p class="article-category">
+          <a class="article-category-link" href="">Language</a>
+          <a class="article-category-link" href="">Topic</a>
+        </p>
       </article>
     </main>
 
@@ -186,30 +211,49 @@
     </section>
 
     <section id="subscribe-form">
-      <form action="post">
-        <label for="name">Name</label>
-        <input id="name" name="name" type="text">
+      <form id="form-field" action="post">
+        <p id="form-title">Subscribe to our Newsletter</p>
+
+        <input id="name" name="name" type="text" placeholder="Name" required>
         <br>
-        <label for="e-mail">E-mail</label>
-        <input type="email" name="e-mail" id="e-mail">
+        <input id="email" type="email" name="email" placeholder="Email" required>
+
+        <fieldset id="frequency">
+          <legend id="frequency-text">Please select frequency:</legend>
+          <div class="frequency-selector">
+            <input id="monthly" type="radio" name="frequency" value="monthly" checked>
+            <label class="frequency-label" for="monthly">Monthly</label>
+          </div>
+          <div class="frequency-selector">
+            <input id="weekly" type="radio" name="frequency" value="weekly">
+            <label class="frequency-label" for="weekly">Weekly</label>
+          </div>
+          <div class="frequency-selector">
+            <input id="daily" type="radio" name="frequency" value="daily">
+            <label class="frequency-label" for="daily">Daily</label>
+          </div>
+        </fieldset>
+  
         <button id="subscribe">Subscribe</button>
       </form>
+
+      <p id="form-text">Get free access to all our articles!</p>
     </section>
 
     <footer>
-      <p id="copyright">Copyright 2022</p>
+      <p id="copyright">Copyright © 2022 <em>Marina Saitgareeva</em></p>
       <a class="social-link" href="https://www.instagram.com/">
-        <img class="social-logo" src="" alt="instagram">
+        <img class="social-logo" src="images/instagram.png" alt="instagram">
       </a>
       <a class="social-link" href="https://www.facebook.com/">
-        <img class="social-logo" src="" alt="facebook">
+        <img class="social-logo" src="images/facebook.png" alt="facebook">
       </a>
       <a class="social-link" href="https://www.linkedin.com/">
-        <img class="social-logo" src="" alt="LinkedIn">
+        <img class="social-logo" src="images/linkedin.png" alt="LinkedIn">
       </a>
       <a class="social-link" href="https://twitter.com/">
-        <img class="social-logo" src="" alt="Twitter">
-      </a>
+        <img class="social-logo" src="images/twitter.png" alt="Twitter">
+      </a>  
     </footer>
 </body>
 </html>
