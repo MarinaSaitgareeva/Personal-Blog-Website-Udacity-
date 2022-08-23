@@ -1,15 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blog Post</title>
-  <style rel="stylesheet" href="css/blog-post.css"></style>
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Article 1</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mali:wght@500&family=Open+Sans&family=Raleway:wght@500&display=swap" rel="stylesheet">  
+  </head>
+
 <body>
-  <div class="container">
-    
-  </div>
+  <header>
+    <div id="logo">
+      <img id="logo-img" src="images/hacker.png" alt="logo">
+      <strong id="page-name">Marina's Blog</strong>
+    </div>
+
+    <nav id="navbar-menu">
+      <ul id="navbar-list">
+        <li class="nav-item"><a class="nav-link" href="blog.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="">About us</a></li>
+        <li class="nav-item"><a class="nav-link" href="">HTML</a></li>
+        <li class="nav-item"><a class="nav-link" href="">CSS</a></li>
+        <li class="nav-item"><a class="nav-link" href="">JavaScript</a></li>
+        <li class="nav-item"><a class="nav-link" href="">Python</a></li>
+        <li class="nav-item"><a class="nav-link" href="">Git and GitHub</a></li>
+        <li class="nav-item">
+          <form id="search" action="/action_page.php">
+            <input id="nav-search-text" type="text" placeholder="Search..." name="search">
+            
+            <button id="nav-search-butn" type="submit">
+              <img id="nav-search-img" src="images/search-alt-free-icon-font.png" alt="">
+            </button>
+          </form>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main id="container">
+    <h1 id="main-article-title">
+      Main Article 1
+    </h1>
+  </main>
+
+  <section id="subscribe-form">
+    <form id="form-field" action="post">
+      <p id="form-title">Subscribe to our Newsletter</p>
+
+      <input id="name" name="name" type="text" placeholder="Name" required>
+      <br>
+      <input id="email" type="email" name="email" placeholder="Email" required>
+
+      <fieldset id="frequency">
+        <legend id="frequency-text">Please select frequency:</legend>
+        <div class="frequency-selector">
+          <input id="monthly" type="radio" name="frequency" value="monthly" checked>
+          <label class="frequency-label" for="monthly">Monthly</label>
+        </div>
+        <div class="frequency-selector">
+          <input id="weekly" type="radio" name="frequency" value="weekly">
+          <label class="frequency-label" for="weekly">Weekly</label>
+        </div>
+        <div class="frequency-selector">
+          <input id="daily" type="radio" name="frequency" value="daily">
+          <label class="frequency-label" for="daily">Daily</label>
+        </div>
+      </fieldset>
+
+      <button id="subscribe">Subscribe</button>
+    </form>
+
+    <p id="form-text">Get free access to all our articles!</p>
+  </section>
+
+  <footer>
+    <p id="copyright">Copyright © 2022 <em>&nbsp; &nbsp; Marina Saitgareeva</em></p>
+    <a class="social-link" href="https://www.instagram.com/">
+      <img class="social-logo" src="images/instagram.png" alt="instagram">
+    </a>
+    <a class="social-link" href="https://www.facebook.com/">
+      <img class="social-logo" src="images/facebook.png" alt="facebook">
+    </a>
+    <a class="social-link" href="https://www.linkedin.com/">
+      <img class="social-logo" src="images/linkedin.png" alt="LinkedIn">
+    </a>
+    <a class="social-link" href="https://twitter.com/">
+      <img class="social-logo" src="images/twitter.png" alt="Twitter">
+    </a>  
+  </footer>
+
 </body>
 </html>

@@ -1,3 +1,4 @@
+/* General rules */
 *,
 *::before,
 *::after {
@@ -26,16 +27,17 @@ picture {
   max-width: 100%;
 }
 
-
 body {
   background-color: #f5f5f5;
   box-sizing: border-box;
   color: #263238;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   margin: 0 3rem 1.5rem;
   line-height: 1.5;
 }
 
+
+/* Navigation bar */
 header {
   width: 94%;
   position: fixed;
@@ -50,50 +52,50 @@ header {
   z-index: 99;
 }
 
-div#logo {
-  font-family: 'Mali', cursive;
+#logo {
+  font-family: "Mali", cursive;
   font-size: 2rem;
 }
 
-img#logo-img {
+#logo-img {
   border: none;
   height: 2rem;
   width: auto;
   padding-right: 1rem;
 }
 
-nav#navbar-menu {
+#navbar-menu {
   margin-left: auto;
 }
 
-ul#navbar-list {
+#navbar-list {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
 }
 
-li.nav-item {
+.nav-item {
   list-style-type: none;
   padding: 0 0.7rem;
 }
 
-a.nav-link {
+.nav-link {
   color: #546E7A;
   text-decoration: none;
   transition: 0.5s all ease-in-out;
 }
 
-a.nav-link:hover {
+.nav-link:hover {
   color: #045ab0;
   font-size: 1.4rem;
   font-weight: 900;
 }
 
-form#search {
+#search {
   margin-left: 1.5rem;
 }
 
-input#nav-search-text {
+#nav-search-text {
   width: 9rem;
   height: 1.5rem;
   border: none;
@@ -102,7 +104,7 @@ input#nav-search-text {
   padding-left: 1em;
 }
 
-button#nav-search-butn {
+#nav-search-butn {
   position: relative;
   right: 1.5rem;
   height: 0.7rem;
@@ -113,9 +115,14 @@ button#nav-search-butn {
   cursor: pointer;
 }
 
+#navbar-mobile {
+  display: none
+}
 
 
-main#container {
+
+/* Articles (shorts and main) */
+#container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(6, auto); 
@@ -123,14 +130,14 @@ main#container {
   margin-top: 8rem;
 }
 
-p.article-category {
+.article-category {
   font-size: 0.7rem;
   font-weight: 700;
   margin-bottom: 1rem;
   cursor: pointer;
 }
 
-a.article-category-link {
+.article-category-link {
   text-decoration: none;
   background-color: rgba(233, 237, 250, 0.791);
   color: #546E7A;
@@ -139,24 +146,24 @@ a.article-category-link {
   transition: 0.4s;
 }
 
-a.article-category-link:hover {
+.article-category-link:hover {
   color: #000;
 }
 
-div.author-photo,
-h4.author-and-date {
+.author-photo,
+.author-and-date {
   display: inline;
   color: #263238;
   font-size: 0.8rem;
   font-weight: 700;
 }
 
-em.author-and-date-small {
+.author-and-date-small {
   font-size: 0.65rem;
   opacity: 65%;
 }
 
-img.author-photo-img {
+.author-photo-img {
   width: 1.2rem;
   aspect-ratio: 1;
   border-radius: 50%;
@@ -164,20 +171,20 @@ img.author-photo-img {
 }
 
 
-
-article.main-article {
+/* Main Article */
+.main-article {
   grid-row: span 2;
   grid-column: span 2;
   background-color: transparent;
   padding: 5rem;
 }
 
-h1.main-article-title {
+.main-article-title {
   margin: 2rem 0 1rem;
 }
 
-a.main-article-title-link {
-  font-family: 'Raleway', sans-serif;
+.main-article-title-link {
+  font-family: "Raleway", sans-serif;
   color: #263238e5;
   font-size: 4rem;
   text-decoration: none;
@@ -185,17 +192,17 @@ a.main-article-title-link {
   transition: 0.4s;
 }
 
-a.main-article-title-link:hover {
+.main-article-title-link:hover {
   color: #045ab0;
 }
 
 
-p.main-article-short-text {
+.main-article-short-text {
   line-height: 1.7;
   margin: 3rem 0;
 }
 
-a.main-article-continue-reading {
+.main-article-continue-reading {
   display: inline;
   background-color: #fff;
   border: 1px solid #0066CC;
@@ -208,19 +215,20 @@ a.main-article-continue-reading {
   transition: 0.3s;
 }
 
-button.main-article-continue-reading-btn {
+.main-article-continue-reading-btn {
   border: none;
   background-color: transparent;
 }
 
-a.main-article-continue-reading:hover {
+.main-article-continue-reading:hover {
   background-image: linear-gradient(to top right, #0066CC, #653EF1);
   box-shadow: 0px 0px 11px 0px rgb(50 50 50 / 60%);
   color: #fff;
 }
 
 
-article.acticle {
+/* Article (short form) */
+.acticle {
   background-color: transparent;
   border: 1px solid #E7EBED;
   border-radius: 1rem;
@@ -228,17 +236,17 @@ article.acticle {
   transition: 0.2s all ease-in-out;
 }
 
-article.acticle:hover {
+.acticle:hover {
   transform: scale(1.01);
   box-shadow: 0px 0px 11px 0px rgb(50 50 50 / 10%);
 }
 
-h1.article-title {
+.article-title {
   margin: 2rem 0 1rem;
 }
 
-a.article-title-link {
-  font-family: 'Raleway', sans-serif;
+.article-title-link {
+  font-family: "Raleway", sans-serif;
   color: #263238e5;
   font-size: 2rem;
   text-decoration: none;
@@ -246,19 +254,19 @@ a.article-title-link {
   transition: 0.4s;
 }
 
-a.article-title-link:hover {
+.article-title-link:hover {
   color: #045ab0;
 }
 
 
-
-section#subscribe-form {
+/* Subscription form */
+#subscribe-form {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
 }
 
-form#form-field {
+#form-field {
   flex-basis: 35%;
   background: #eee;
   border-radius: 1rem;
@@ -269,14 +277,14 @@ form#form-field {
   margin: 4rem 0;
 }
 
-p#form-title {
+#form-title {
   font-size: 1.5rem;
   color: #263238;
   margin-bottom: 2rem;
 }
 
-input#name,
-input#email {
+#name,
+#email {
   height: 40px;
   width: 400px;
   background-color: #fff;
@@ -287,7 +295,7 @@ input#email {
   margin-bottom: 1rem;
 }
 
-fieldset#frequency {
+#frequency {
   display: flex;
   justify-content: space-evenly;
   border: 1px solid #CFD8DC;
@@ -296,23 +304,23 @@ fieldset#frequency {
   margin-top: 1rem;
 }
 
-input#monthly,
-input#weekly,
-input#daily,
-label.frequency-label {
+#monthly,
+#weekly,
+#daily,
+.frequency-label {
   margin: 1.2rem 0.15rem;
   cursor: pointer;
   transition: 0.4s;
 }
 
-input#monthly,
-input#weekly,
-input#daily,
-label.frequency-label:hover {
+#monthly,
+#weekly,
+#daily,
+.frequency-label:hover {
   color: #045ab0;
 }
 
-button#subscribe {
+#subscribe {
   width: 50%;
   background: #1c6fc2ec;
   border: none;
@@ -325,13 +333,13 @@ button#subscribe {
   transition: 0.3s all ease-in-out;
 }
 
-button#subscribe:hover {
+#subscribe:hover {
   background: #022547;
   border: none;
   box-shadow: 0px 0px 11px 0px rgb(50 50 50 / 60%);
 }
 
-p#form-text {
+#form-text {
   flex-basis: 20rem;
   font-size: 2.5rem;
   font-weight: 900;
@@ -339,7 +347,8 @@ p#form-text {
 }
 
 
-section#page-navigation {
+/* Page-Navigation */
+#page-navigation {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -348,21 +357,20 @@ section#page-navigation {
   margin: 3rem 0 1rem;
 }
 
-a.page-number-active {
+.page-number-active {
   border-bottom: 2px solid #0066cc;
   color: #0066cc;
   text-decoration: none;
 }
 
-a.page-number,
-p.page-number {
+.page-number {
   border-bottom: 2px solid transparent;
   color: #0066cc;
   text-decoration: none;
   transition: 0.4s;
 }
 
-a.page-number:hover {
+.page-number:hover {
  font-size: 1.2rem;
  font-style: bold;
 }
@@ -371,7 +379,7 @@ p.page-number {
   letter-spacing: 0.3rem;
 }
 
-button#next-page {
+#next-page {
   background: none;
   border: 1px solid #cfd8dcb3;
   color: #0066cc;
@@ -383,35 +391,35 @@ button#next-page {
   transition: 0.4s all ease-in-out;
 }
 
-button#next-page:hover {
+#next-page:hover {
   box-shadow: 0px 0px 11px 0px rgb(50 50 50 / 20%);
 }
 
 
-
+/* Footer */
 footer {
   text-align: center;
 }
 
-p#copyright {
+#copyright {
   color: #263238;
   font-size: 0.8rem;
   margin: 1rem auto;
 }
 
-a.social-link {
+.social-link {
   text-decoration: none;
   margin: 0 0.8rem;
   cursor: pointer;
 }
 
-img.social-logo {
+.social-logo {
   height: 20px;
   width: 20px;
   opacity: 60%;
   transition: 0.4s all ease-in-out;
 }
 
-img.social-logo:hover {
+.social-logo:hover {
   transform: scale(1.5);
 }
