@@ -53,57 +53,57 @@ header {
 
 #logo {
   font-family: "Mali", cursive;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 #logo-img {
   height: 2rem;
   width: auto;
   border: none;
-  padding-right: 1rem;
+  padding-right: 0.6rem;
 }
 
-#navbar-menu {
-  margin-left: auto;
+.navbar-menu {
+  margin: 0.5rem 0 0 auto;
 }
 
-#navbar-list {
+.navbar-list {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  gap: 1.1rem;
 }
 
 .nav-item {
   list-style-type: none;
-  padding: 0 0.7rem;
 }
 
 .nav-link {
   color: #546E7A;
   text-decoration: none;
-  transition: 0.5s all ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .nav-link:hover {
   color: #045ab0;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-weight: 900;
 }
 
 #search {
-  margin-left: 1.5rem;
+  margin-left: 0.8rem;
 }
 
 #nav-search-text {
-  width: 9rem;
+  width: 8rem;
   height: 1.5rem;
   border: none;
   border-radius: 1rem;
   font-size: 0.8rem;
-  padding-left: 1em;
+  padding-left: 1rem;
 }
 
-#nav-search-butn {
+#nav-search-btn {
   position: relative;
   right: 1.5rem;
   height: 0.7rem;
@@ -114,8 +114,90 @@ header {
   cursor: pointer;
 }
 
+
+#checkbox-toggle {
+	position: absolute;
+	top: -100px;
+}
+
+
 #navbar-mobile {
   display: none
+}
+
+
+/* Add responsive design for Navbar */
+.navbar-mobile-btn {
+    display: none;
+    cursor: pointer;
+}
+
+.line {
+	width: 0.8rem;
+	height: 0.1rem;
+	background-color: #546E7A;
+	margin: 2px;
+	border-radius: 3px;
+	transition: all 0.4s ease-in-out;
+}
+
+.navbar-mobile-btn:hover {
+  box-shadow: 0 0 1rem 0 rgb(50 50 50 / 20%);
+}
+
+@media screen and (max-width: 900px) {
+  .navbar-list {
+    display: none;
+		position: absolute;
+		z-index: 9;
+		left: 0;
+		right: 0;
+    background-color: #f5f5f5;
+    transition: all 0.5s ease-in-out;
+	}
+
+  nav :checked ~ .navbar-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    position: absolute;
+    top: 80%;
+    left: 65%;
+    transform: translateX(-15%);
+    border: 1px solid rgba(0, 0, 0, 0.061);
+    border-radius: 1rem;
+    box-shadow: 0 0 1rem 0 rgb(50 50 50 / 30%);
+    padding: 1.8rem 0;
+	}
+
+  .navbar-mobile-btn {
+		display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.8rem;
+    background-color: #fff;
+    border: 1px solid #0066cc9c;
+    border-radius: 2rem;
+    padding: 0.3rem 0.7rem;
+	}
+
+  nav :checked ~ .navbar-mobile-btn .line:nth-child(1) {
+
+    transform: translateY(0.22rem) rotate(225deg);
+	}
+	nav :checked ~ .navbar-mobile-btn .line:nth-child(3) {
+
+		transform: translateY(-0.22rem) rotate(-225deg);
+	}
+	nav :checked ~ .navbar-mobile-btn .line:nth-child(2) {
+		opacity: 0;
+	}
+
 }
 
 

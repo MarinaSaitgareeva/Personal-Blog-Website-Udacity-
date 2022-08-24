@@ -21,25 +21,38 @@
         <strong id="page-name">Marina's Blog</strong>
       </div>
 
-      <nav id="navbar-menu">
-        <ul id="navbar-list">
+
+
+      <nav class="navbar-menu">
+        <input type="checkbox" id="checkbox-toggle">
+
+        <ul class="navbar-list">
           <li class="nav-item"><a class="nav-link" href="blog.html">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="">About us</a></li>
           <li class="nav-item"><a class="nav-link" href="">HTML</a></li>
           <li class="nav-item"><a class="nav-link" href="">CSS</a></li>
           <li class="nav-item"><a class="nav-link" href="">JavaScript</a></li>
           <li class="nav-item"><a class="nav-link" href="">Python</a></li>
-          <li class="nav-item"><a class="nav-link" href="">Git and GitHub</a></li>
+          <li class="nav-item"><a class="nav-link" href="">Git</a></li>
           <li class="nav-item">
             <form id="search" action="/action_page.php">
               <input id="nav-search-text" type="text" placeholder="Search..." name="search">
-
-              <button id="nav-search-butn" type="submit">
+  
+              <button id="nav-search-btn" type="submit">
                 <img id="nav-search-img" src="images/search-alt-free-icon-font.png" alt="">
               </button>
             </form>
           </li>
         </ul>
+
+        <label for="checkbox-toggle" class="navbar-mobile-btn">
+          <p class="navbar-mobile-btn-text">Menu</p>
+          <div class="navbar-mobile-btn-line">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </div>
+        </label>
       </nav>
 
       <button id="navbar-mobile">
