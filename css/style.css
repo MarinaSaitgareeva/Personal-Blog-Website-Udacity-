@@ -214,7 +214,6 @@ header {
 }
 
 
-
 /* Articles (shorts and main) */
 #container {
   display: grid;
@@ -395,6 +394,7 @@ header {
     font-size: 1.5rem;
   }
 }
+
 
 /* Page-Navigation */
 #page-navigation {

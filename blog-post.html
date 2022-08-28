@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Main Article 1</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/blog-post.css">
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,38 +13,105 @@
   </head>
 
 <body>
+  
   <header>
     <div id="logo">
       <img id="logo-img" src="images/hacker.png" alt="logo">
       <strong id="page-name">Marina's Blog</strong>
     </div>
 
-    <nav id="navbar-menu">
-      <ul id="navbar-list">
+    <nav class="navbar-menu">
+      <input type="checkbox" id="checkbox-toggle">
+
+      <ul class="navbar-list" role="list">
         <li class="nav-item"><a class="nav-link" href="blog.html">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="">About us</a></li>
         <li class="nav-item"><a class="nav-link" href="">HTML</a></li>
         <li class="nav-item"><a class="nav-link" href="">CSS</a></li>
         <li class="nav-item"><a class="nav-link" href="">JavaScript</a></li>
         <li class="nav-item"><a class="nav-link" href="">Python</a></li>
-        <li class="nav-item"><a class="nav-link" href="">Git and GitHub</a></li>
+        <li class="nav-item"><a class="nav-link" href="">Git</a></li>
         <li class="nav-item">
           <form id="search" action="/action_page.php">
-            <input id="nav-search-text" type="text" placeholder="Search..." name="search">
-            
-            <button id="nav-search-butn" type="submit">
-              <img id="nav-search-img" src="images/search-alt-free-icon-font.png" alt="">
-            </button>
+            <input id="nav-search-text" type="text" placeholder="&#128269   Search..." name="search">
           </form>
         </li>
       </ul>
+
+      <label for="checkbox-toggle" class="navbar-mobile-btn">
+        <p class="navbar-mobile-btn-text">Menu</p>
+        <div class="navbar-mobile-btn-line">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+      </label>
     </nav>
+
+    <button id="navbar-mobile">
+      Menu
+    </button>
   </header>
   
-  <main id="container">
-    <h1 id="main-article-title">
-      Main Article 1
+  <main class="container">
+    <h1 class="article-title">
+      Main article 1
     </h1>
+
+    <div class="author-photo-name-date">
+      <div class="author-photo">
+        <img class="author-photo-img" src="images/beauty.png" alt="foto of author">
+      </div>
+  
+      <div class="author-name">
+        <h4 class="author-and-date"><em class="author-and-date-small">written by</em> &nbsp; Author &nbsp; </h4>
+      </div>
+      
+      <div class="posted-date">
+        <h4 class="author-and-date"><em class="author-and-date-small">posted on</em> &nbsp; Date</h4>
+      </div>
+    </div>
+
+    <article class="main-text">
+      <div class="text">
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur impedit culpa voluptates ullam totam, aliquid cupiditate nulla fuga quos repellendus maiores ab iure quasi libero, veniam, blanditiis eveniet distinctio delectus.
+        </p>
+        <br>
+    
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur impedit culpa voluptates ullam totam, aliquid cupiditate nulla fuga quos repellendus maiores ab iure quasi libero, veniam, blanditiis eveniet distinctio delectus.
+        </p>
+        <br>
+        
+        <h3 class="sub-title">Title</h3>
+  
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur impedit culpa voluptates ullam totam, aliquid cupiditate nulla fuga quos repellendus maiores ab iure quasi libero, veniam, blanditiis eveniet distinctio delectus.
+        </p>
+        <br>
+    
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur impedit culpa voluptates ullam totam, aliquid cupiditate nulla fuga quos repellendus maiores ab iure quasi libero, veniam, blanditiis eveniet distinctio delectus.
+        </p>
+        <br>
+    
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur impedit culpa voluptates ullam totam, aliquid cupiditate nulla fuga quos repellendus maiores ab iure quasi libero, veniam, blanditiis eveniet distinctio delectus.
+        </p>
+        <br>
+      </div>
+
+      <div class="short-text-main-term-archive">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure error quam veniam eum iste exercitationem eius reprehenderit cupiditate numquam quibusdam. Inventore nobis impedit veniam accusamus architecto, at minima. Sed, corrupti!
+        </p>
+      </div>
+
+      </article>
+    
+     
+    
   </main>
 
   <section id="subscribe-form">

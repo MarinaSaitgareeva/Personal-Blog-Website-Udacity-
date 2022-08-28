@@ -1,140 +1,334 @@
-/* General rules */
+/* Box sizing rules */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
+/* Remove default margin */
 * {
   padding: 0;
   margin: 0;
   /* font: inherit; */
 }
 
+/* Set core root defaults */
 html:focus-within {
   scroll-behavior: smooth;
 }
 
-input,
-button,
-textarea,
-select {
-  font: inherit;
+html,
+body {
+  height: 100%;
 }
 
+/* Make images easier to work with */
 img,
-picture {
+picture,
+svg {
   max-width: 100%;
 }
 
+/* Set core body defaults */
 body {
   background-color: #f5f5f5;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   color: #263238;
-  line-height: 1.5;
-  margin: 0 3rem 1.5rem;
-
+  line-height: 1.3;
+  text-rendering: optimizeSpeed;
 }
 
 
 /* Navigation bar */
 header {
-  width: 94%;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+
   position: fixed;
   top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   background-color: #f5f5f5;
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: #546E7A;
-  padding: 1rem 0;
+  padding: 1rem 0.5rem 2rem;
   z-index: 99;
 }
-  
+
 #logo {
+  position: relative;
+  left: 4%;
   font-family: "Mali", cursive;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
-  
+
 #logo-img {
   height: 2rem;
   width: auto;
   border: none;
-  padding-right: 1rem;
+  padding-right: 0.6rem;
 }
-  
-#navbar-menu {
-  margin-left: auto;
+
+.navbar-menu {
+  margin: 0.5rem 0 0 auto;
 }
-  
-#navbar-list {
+
+.navbar-list {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  gap: 0.9rem;
 }
-  
+
 .nav-item {
   list-style-type: none;
-  padding: 0 0.7rem;
 }
-  
+
 .nav-link {
   color: #546E7A;
   text-decoration: none;
-  transition: 0.5s all ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
-  
+
 .nav-link:hover {
   color: #045ab0;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-weight: 900;
 }
-  
+
 #search {
-  margin-left: 1.5rem;
+  padding-left: 1rem;
 }
-  
+
 #nav-search-text {
-  width: 9rem;
+  width: 8rem;
   height: 1.5rem;
   border: none;
   border-radius: 1rem;
+  font-size: 0.7rem;
+  opacity: 40%;
+  padding-left: 0.5rem;
+}
+
+#nav-search-text:hover,
+#nav-search-text:focus {
+  color: #546E7A;
   font-size: 0.8rem;
-  padding-left: 1em;
+  opacity: 100%;
+  border: 1px solid #0066CC;
 }
-  
-#nav-search-butn {
-  position: relative;
-  right: 1.5rem;
-  height: 0.7rem;
-  width: 0.7rem;
-  opacity: 50%;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
+
+
+/* Add checkbox for Navbar button for responsove desigh */
+#checkbox-toggle {
+	position: absolute;
+	top: -100px;
 }
-  
+
 #navbar-mobile {
   display: none
 }
 
 
+/* Add responsive design for Navbar */
+.navbar-mobile-btn {
+    display: none;
+    cursor: pointer;
+}
 
-main#container {
+.line {
+	width: 0.8rem;
+	height: 0.1rem;
+	background-color: #546E7A;
+	margin: 2px;
+	border-radius: 3px;
+	transition: all 0.4s ease-in-out;
+}
+
+.navbar-mobile-btn:hover {
+  box-shadow: 0 0 1rem 0 rgb(50 50 50 / 20%);
+}
+
+@media only screen and (max-width: 900px) {
+  .navbar-list {
+    display: none;
+		position: absolute;
+		z-index: 99;
+		left: 0;
+		right: 0;
+    background-color: #f5f5f5;
+    transition: all 0.5s ease-in-out;
+	}
+
+  nav :checked ~ .navbar-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    align-items: center;
+    position: absolute;
+    top: 80%;
+    left: 70%;
+    right: 4%;
+    /* transform: translateX(0); */
+    border: 1px solid rgba(0, 0, 0, 0.061);
+    border-radius: 1rem;
+    box-shadow: 0 0 1rem 0 rgb(50 50 50 / 30%);
+    padding: 1.5rem 0rem;
+	}
+
+  .navbar-mobile-btn {
+		display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    position: absolute;
+    right: 4%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.8rem;
+    background-color: #fff;
+    border: 1px solid #0066cc9c;
+    border-radius: 2rem;
+    padding: 0.3rem 0.7rem;
+	}
+
+  nav :checked ~ .navbar-mobile-btn .line:nth-child(1) {
+
+    transform: translateY(0.22rem) rotate(225deg);
+	}
+	nav :checked ~ .navbar-mobile-btn .line:nth-child(3) {
+
+		transform: translateY(-0.22rem) rotate(-225deg);
+	}
+	nav :checked ~ .navbar-mobile-btn .line:nth-child(2) {
+		opacity: 0;
+	}
+
+  #nav-search-text {
+    width: 90%;
+  }
+}
+
+
+/* Articles */
+.container {
+  max-width: 1200px;
+  margin: 7rem auto 0;
+}
+
+.main-text {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(6, auto); 
-  gap: 2.5rem;
-  margin-top: 8rem;
+  grid-template-columns: 70% 30%;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 7rem auto 0;
+}
+
+.article-title {
+  font-family: "Raleway", sans-serif;
+  color: #141a1de5;
+  font-size: 5rem;
+  text-align: center;
 }
 
 
-h1#mail-article-title {
+.author-photo-name-date {
+  text-align: center;
+  color: #263238;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-top: 1.5rem;
+}
 
+.author-photo {
+  display: inline;
+}
+
+.author-photo-img {
+  width: 2.5rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  margin-right: 0.4rem;
+  position: relative;
+  top: 0.2rem;
+}
+
+.author-name,
+.posted-date {
+  display: inline-block;
+  margin: 0 0.5rem;
+}
+
+.author-and-date-small {
+  display: block;
+  font-size: 0.7rem;
+  opacity: 70%;
 }
 
 
+
+
+
+
+/* Page-Navigation */
+#page-navigation {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.page-number-active {
+  border-bottom: 2px solid #0066cc;
+  color: #0066cc;
+  font-size: 0.8rem;
+  text-decoration: none;
+  transition: 0.4s;
+}
+
+.page-number {
+  border-bottom: 2px solid transparent;
+  color: #0066cc;
+  text-decoration: none;
+  font-size: 0.8rem;
+  transition: 0.4s;
+}
+
+.page-number:hover,
+.page-number-active:hover {
+ font-size: 1rem;
+ font-style: bold;
+}
+
+p.page-number {
+  letter-spacing: 0.1rem;
+}
+
+.change-page {
+  background: none;
+  border: 1px solid #cfd8dcb3;
+  padding: 0.4rem 0.8rem;
+  margin-inline: 0.4rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: 0.4s all ease-in-out;
+}
+
+.change-page:hover {
+  box-shadow: 0 0 1rem 0 rgb(50 50 50 / 20%);
+}
+
+.change-page-link {
+  text-decoration: none;
+  color: #0066cc;
+  font-size: 0.7rem;
+}
 
 
 /* Subscription form */
@@ -218,38 +412,67 @@ h1#mail-article-title {
 }
 
 #form-text {
-  flex-basis: 20rem;
+  flex-basis: 25%;
   font-size: 2.5rem;
   font-weight: 900;
   text-align: center;
 }
-  
 
-  
- /* Footer */
-footer {
-    text-align: center;
+
+/* Responsive design for subscription form */
+@media only screen and (max-width: 900px) {
+  #subscribe-form {
+    flex-direction: column-reverse;
+    margin-top: 2.5rem;
+  }
+
+  #form-text {
+    font-size: 1.5rem;
+  }
+
+  #form-field {
+    margin: 1rem auto;
+    scale: 0.85;
+  }
 }
-  
+
+@media only screen and (max-width: 600px) {
+  #form-text {
+    margin-bottom: -1rem;
+  }
+
+  #form-field {
+    margin: 0 0 -2rem;
+    scale: 0.7;
+  }
+}
+
+
+/* Footer */
+footer {
+  text-align: center;
+  padding-bottom: 1.5rem;
+}
+
 #copyright {
   color: #263238;
   font-size: 0.8rem;
   margin: 1rem auto;
 }
-  
+
 .social-link {
   text-decoration: none;
-  margin: 0 0.8rem;
+  margin-inline: 0.8rem;
   cursor: pointer;
 }
-  
+
 .social-logo {
   height: 1.25rem;
   width: 1.25rem;
   opacity: 60%;
   transition: 0.4s all ease-in-out;
 }
-  
+
 .social-logo:hover {
   transform: scale(1.5);
 }
