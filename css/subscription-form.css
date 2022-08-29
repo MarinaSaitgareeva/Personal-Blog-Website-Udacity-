@@ -1,0 +1,115 @@
+/* Subscription form */
+#subscribe-form {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  
+  #form-field {
+    flex-basis: 35%;
+    background: #eee;
+    border-radius: 1rem;
+    box-shadow: 0 0 1rem 0 rgb(50 50 50 / 47%);
+    font-size: 1rem;
+    text-align: center;
+    padding: 3rem;
+    margin: 4rem 0;
+  }
+  
+  #form-title {
+    font-size: 1.5rem;
+    color: #263238;
+    margin-bottom: 2rem;
+  }
+  
+  #name,
+  #email {
+    height: 2.5rem;
+    width: 25rem;
+    background-color: #fff;
+    border: 1px solid #CFD8DC;
+    border-radius: 6rem;
+    font-size: 0.8rem;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  #frequency {
+    display: flex;
+    justify-content: space-evenly;
+    border: 1px solid #CFD8DC;
+    color: #263238;
+    font-size: 0.8rem;
+    margin-top: 1rem;
+  }
+  
+  #monthly,
+  #weekly,
+  #daily,
+  .frequency-label {
+    margin: 1.2rem 0.15rem;
+    cursor: pointer;
+    transition: 0.4s;
+  }
+  
+  #monthly,
+  #weekly,
+  #daily,
+  .frequency-label:hover {
+    color: #045ab0;
+  }
+  
+  #subscribe {
+    width: 50%;
+    background: #1c6fc2ec;
+    border: none;
+    border-radius: 5rem;
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 0.5rem 0;
+    margin: 2.5rem auto 0;
+    cursor: pointer;
+    transition: 0.3s all ease-in-out;
+  }
+  
+  #subscribe:hover {
+    background: #022547;
+    border: none;
+    box-shadow: 0 0 1rem 0 rgb(50 50 50 / 60%);
+  }
+  
+  #form-text {
+    flex-basis: 25%;
+    font-size: 2.5rem;
+    font-weight: 900;
+    text-align: center;
+  }
+  
+  
+  /* Responsive design for subscription form */
+  @media only screen and (max-width: 900px) {
+    #subscribe-form {
+      flex-direction: column-reverse;
+      margin-top: 2.5rem;
+    }
+  
+    #form-text {
+      font-size: 1.5rem;
+    }
+  
+    #form-field {
+      margin: 1rem auto;
+      scale: 0.85;
+    }
+  }
+  
+  @media only screen and (max-width: 600px) {
+    #form-text {
+      margin-bottom: -1rem;
+    }
+  
+    #form-field {
+      margin: 0 0 -2rem;
+      scale: 0.7;
+    }
+  }

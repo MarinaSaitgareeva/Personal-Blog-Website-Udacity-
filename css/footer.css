@@ -1,0 +1,28 @@
+/* Footer */
+footer {
+    text-align: center;
+    padding-bottom: 1.5rem;
+  }
+  
+  #copyright {
+    color: #263238;
+    font-size: 0.8rem;
+    margin: 1rem auto;
+  }
+  
+  .social-link {
+    text-decoration: none;
+    margin-inline: 0.8rem;
+    cursor: pointer;
+  }
+  
+  .social-logo {
+    height: 1.25rem;
+    width: 1.25rem;
+    opacity: 60%;
+    transition: 0.4s all ease-in-out;
+  }
+  
+  .social-logo:hover {
+    transform: scale(1.5);
+  }

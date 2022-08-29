@@ -1,0 +1,186 @@
+/* Navigation bar */
+header {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+  
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: #f5f5f5;
+    font-size: 0.9rem;
+    color: #546E7A;
+    padding: 1rem 0.5rem 2rem;
+    z-index: 99;
+  }
+  
+  #logo {
+    position: relative;
+    left: 4%;
+    font-family: "Mali", cursive;
+    font-size: 1.5rem;
+  }
+  
+  #logo-img {
+    height: 2rem;
+    width: auto;
+    border: none;
+    padding-right: 0.6rem;
+  }
+  
+  #page-name {
+    text-decoration: none;
+    color: #546E7A;
+  }
+
+  #page-name:hover {
+    color: #045ab0;
+  }
+
+  .navbar-menu {
+    margin: 0.5rem 0 0 auto;
+  }
+  
+  .navbar-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .nav-item {
+    list-style-type: none;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .nav-item:hover {
+    transform: scale(1.2);
+  }
+  
+  .nav-link {
+    color: #546E7A;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .nav-link:hover {
+    color: #045ab0;
+    font-weight: 900;
+  }
+  
+  #search {
+    padding-left: 1rem;
+  }
+  
+  #nav-search-text {
+    width: 8rem;
+    height: 1.5rem;
+    border: none;
+    border-radius: 1rem;
+    font-size: 0.7rem;
+    opacity: 40%;
+    padding-left: 0.5rem;
+  }
+  
+  #nav-search-text:hover,
+  #nav-search-text:focus {
+    color: #546E7A;
+    font-size: 0.8rem;
+    opacity: 100%;
+    border: 1px solid #0066CC;
+  }
+  
+  
+  /* Add checkbox for Navbar button for responsove desigh */
+  #checkbox-toggle {
+      position: absolute;
+      top: -100px;
+  }
+  
+  #navbar-mobile {
+    display: none
+  }
+  
+  
+  /* Add responsive design for Navbar */
+  .navbar-mobile-btn {
+      display: none;
+      cursor: pointer;
+  }
+  
+  .line {
+      width: 0.8rem;
+      height: 0.1rem;
+      background-color: #546E7A;
+      margin: 2px;
+      border-radius: 3px;
+      transition: all 0.4s ease-in-out;
+  }
+  
+  .navbar-mobile-btn:hover {
+    box-shadow: 0 0 1rem 0 rgb(50 50 50 / 20%);
+  }
+  
+  @media only screen and (max-width: 900px) {
+    .navbar-list {
+      display: none;
+          position: absolute;
+          z-index: 99;
+          left: 0;
+          right: 0;
+      background-color: #f5f5f5;
+      transition: all 0.5s ease-in-out;
+      }
+  
+    nav :checked ~ .navbar-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+      align-items: center;
+      position: absolute;
+      top: 80%;
+      left: 70%;
+      right: 4%;
+      /* transform: translateX(0); */
+      border: 1px solid rgba(0, 0, 0, 0.061);
+      border-radius: 1rem;
+      box-shadow: 0 0 1rem 0 rgb(50 50 50 / 30%);
+      padding: 1.5rem 0rem;
+      }
+  
+    .navbar-mobile-btn {
+          display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      position: absolute;
+      right: 4%;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 0.8rem;
+      background-color: #fff;
+      border: 1px solid #0066cc9c;
+      border-radius: 2rem;
+      padding: 0.3rem 0.7rem;
+      }
+  
+    nav :checked ~ .navbar-mobile-btn .line:nth-child(1) {
+  
+      transform: translateY(0.22rem) rotate(225deg);
+      }
+      nav :checked ~ .navbar-mobile-btn .line:nth-child(3) {
+  
+          transform: translateY(-0.22rem) rotate(-225deg);
+      }
+      nav :checked ~ .navbar-mobile-btn .line:nth-child(2) {
+          opacity: 0;
+      }
+  
+    #nav-search-text {
+      width: 90%;
+    }
+  }
