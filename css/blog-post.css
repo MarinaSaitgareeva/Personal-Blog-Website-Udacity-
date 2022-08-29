@@ -100,6 +100,20 @@ body {
   margin: 3rem 0.6rem 0;
 }
 
+.blog-post-image-box {
+  margin: 1rem 0 2rem;
+}
+
+.blog-post-image {
+  width: 100%;
+}
+
+.blog-post-caption {
+  font-size: 0.7rem;
+  font-style: italic;
+  opacity: 50%;
+}
+
 .codepen {
   height: 265px;
   display: flex;
